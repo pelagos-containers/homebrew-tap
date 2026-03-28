@@ -8,9 +8,9 @@
 #   brew install --cask pelagos-containers/tap/pelagos-ui
 
 cask "pelagos-ui" do
-  version "0.1.0"
+  version "0.1.1"
 
-  sha256 "2c2e5b4e60d93806fbde4af8850e863a8269424c95f27778d9ead936bcdfd46d"
+  sha256 "5a9a69551109a1b03a3cedccac5ef145a831c61c673628e58c482ed6386b828b"
   url "https://github.com/pelagos-containers/pelagos-ui/releases/download/v#{version}/pelagos-ui_#{version}_aarch64.dmg"
 
   name "pelagos-ui"
