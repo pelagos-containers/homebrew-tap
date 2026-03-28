@@ -10,10 +10,8 @@
 cask "pelagos-ui" do
   version "0.1.0"
 
-  # NOTE: URL and SHA256 are placeholders until CI release artifacts exist.
-  # See https://github.com/pelagos-containers/homebrew-tap/issues/1
-  sha256 "PLACEHOLDER"
-  url "https://github.com/pelagos-containers/pelagos-ui/releases/download/v#{version}/pelagos-ui-#{version}-aarch64.dmg"
+  sha256 "2c2e5b4e60d93806fbde4af8850e863a8269424c95f27778d9ead936bcdfd46d"
+  url "https://github.com/pelagos-containers/pelagos-ui/releases/download/v#{version}/pelagos-ui_#{version}_aarch64.dmg"
 
   name "pelagos-ui"
   desc "Desktop GUI for the pelagos container runtime"
