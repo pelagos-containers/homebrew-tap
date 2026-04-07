@@ -21,7 +21,7 @@ class PelagosMac < Formula
   sha256 "fa5d8b2fefd78b5f3acf44a5746c17cb375699f7f077de731767bad1cc7f53a6"
 
   resource "vm" do
-    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-vm-#{version}.tar.gz"
+    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.1/pelagos-mac-vm-0.6.1.tar.gz"
     sha256 "2f66cf0ac0f3dbb07535eefff889536e367a71223e695833ac409e29c3b4b4dd"
   end
 
