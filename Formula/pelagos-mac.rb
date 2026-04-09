@@ -17,14 +17,14 @@
 class PelagosMac < Formula
   desc "Linux container runtime for Apple Silicon via Virtualization.framework"
   homepage "https://github.com/pelagos-containers/pelagos-mac"
-  version "0.6.4"
+  version "0.6.5"
 
   url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "84d7869fdade744bf59f678137260b66cc2c0a372babaeae90eea9188740c430"
+  sha256 "b50a325452f76dbdf7c19e477d36a725cc48217bf6723b9e59e46393cbc69910"
 
   resource "vm" do
-    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.4/pelagos-mac-vm-0.6.4.tar.gz"
-    sha256 "029799b9e0862f3bc1f564fe4ea41e5da7eab6fd3ffc1f90e5e6a1f8d4198d90"
+    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.5/pelagos-mac-vm-0.6.5.tar.gz"
+    sha256 "e577bd9142b2eb1250fed0368a1629c8f508d589fc023abd9863ca2909c628f7"
   end
 
   def install
