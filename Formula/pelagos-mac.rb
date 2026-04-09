@@ -17,14 +17,14 @@
 class PelagosMac < Formula
   desc "Linux container runtime for Apple Silicon via Virtualization.framework"
   homepage "https://github.com/pelagos-containers/pelagos-mac"
-  version "0.6.3"
+  version "0.6.4"
 
-  url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v\#{version}/pelagos-mac-\#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "dbf97fc24fd612ecebade1cd37fe629bd244910802341c9297902d9d34423bcb"
+  url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-#{version}-aarch64-apple-darwin.tar.gz"
+  sha256 "84d7869fdade744bf59f678137260b66cc2c0a372babaeae90eea9188740c430"
 
   resource "vm" do
-    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.3/pelagos-mac-vm-0.6.3.tar.gz"
-    sha256 "d984b43548a7c02d601d1248181bd03fa4f6722a9d37414670a22f01e46147fc"
+    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.4/pelagos-mac-vm-0.6.4.tar.gz"
+    sha256 "029799b9e0862f3bc1f564fe4ea41e5da7eab6fd3ffc1f90e5e6a1f8d4198d90"
   end
 
   def install
@@ -40,7 +40,7 @@ class PelagosMac < Formula
         pelagos vm init
 
       This writes ~/.local/share/pelagos/vm.conf pointing at the VM
-      artifacts installed to \#{share}/pelagos-mac.
+      artifacts installed to #{share}/pelagos-mac.
 
       Then verify and run a container:
         pelagos ping
@@ -49,6 +49,6 @@ class PelagosMac < Formula
   end
 
   test do
-    assert_match "pelagos", shell_output("\#{bin}/pelagos --help 2>&1")
+    assert_match "pelagos", shell_output("#{bin}/pelagos --help 2>&1")
   end
 end
