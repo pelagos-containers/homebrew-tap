@@ -17,14 +17,14 @@
 class PelagosMac < Formula
   desc "Linux container runtime for Apple Silicon via Virtualization.framework"
   homepage "https://github.com/pelagos-containers/pelagos-mac"
-  version "0.6.8"
+  version "0.6.9"
 
   url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "2c260ed06f1a94e4752a01e0f1a58a28b5bafa87904ed15fefd8893b67e7b196"
+  sha256 "1642461e4fc7c2e29f5b76f55b6cbc4b8920dd508d8bc785c11ed7becbce046e"
 
   resource "vm" do
-    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.8/pelagos-mac-vm-0.6.8.tar.gz"
-    sha256 "77c828c51ef7aa2db1a432b2a573649f4e901e406923ad38d05db0080c3d6d8e"
+    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.9/pelagos-mac-vm-0.6.9.tar.gz"
+    sha256 "e0b788a42452f941ab0efeee49e436659b9eb9cf9fc320db3c3862c7078a8b71"
   end
 
   def install
@@ -45,6 +45,16 @@ class PelagosMac < Formula
       Then verify and run a container:
         pelagos ping
         pelagos run alpine echo hello
+
+      To upgrade:
+        brew upgrade pelagos-containers/tap/pelagos-mac
+        pelagos vm init --force   # stops old VM, re-inits with new image
+        pelagos ping
+
+      To uninstall completely:
+        pelagos vm stop
+        brew uninstall pelagos-containers/tap/pelagos-mac
+        rm -rf ~/.local/share/pelagos   # OCI cache + vm.conf (not removed by brew)
     EOS
   end
 
