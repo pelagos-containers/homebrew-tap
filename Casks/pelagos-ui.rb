@@ -8,8 +8,8 @@
 #   brew install --cask pelagos-containers/tap/pelagos-ui
 
 cask "pelagos-ui" do
-  version "0.1.5"
-  sha256 "d3e3d4af993311e026b3a8fad7f44af8344487eebb61af7d80248461350b3331"
+  version "0.1.6"
+  sha256 "0081f04bd755689ab46b1ef55f05b4607938391fb60bbca4262d617b56a064ab"
 
   url "https://github.com/pelagos-containers/pelagos-ui/releases/download/v#{version}/Pelagos_#{version}_aarch64.dmg"
   name "Pelagos"
@@ -21,13 +21,6 @@ cask "pelagos-ui" do
   depends_on formula: "pelagos-containers/tap/pelagos-mac"
 
   app "Pelagos.app"
-
-  # Ad-hoc signed only — remove Gatekeeper quarantine after install.
-  # TODO: remove postflight once Developer ID signing + notarization is in place (epic #225).
-  postflight do
-    system_command "/usr/bin/xattr",
-      args: ["-dr", "com.apple.quarantine", "#{appdir}/Pelagos.app"]
-  end
 
   uninstall quit: "io.pelagos.ui"
 
