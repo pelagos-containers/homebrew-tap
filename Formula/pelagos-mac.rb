@@ -20,11 +20,11 @@ class PelagosMac < Formula
   version "0.6.14"
 
   url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "9d43ae5fdb9b5adb73b2ced1dac15a835c583eb4f3161d887112a126bab1878f"
+  sha256 "872cf2a52e1164bc94e5561f2a5534f508125b62ed1d72d0284ced83ef7e8ace"
 
   resource "vm" do
     url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.14/pelagos-mac-vm-0.6.14.tar.gz"
-    sha256 "8035c79e3c1384cf7ab60d8a15cae11c2ad95922525a3fe7545e5360779cb43b"
+    sha256 "d98d3fff492d5a71ff71217e551bed0ae9bbdf2a1058ec4e3cb63224183c5ddf"
   end
 
   def install
