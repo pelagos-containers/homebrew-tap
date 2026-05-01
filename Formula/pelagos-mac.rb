@@ -17,14 +17,14 @@
 class PelagosMac < Formula
   desc "Linux container runtime for Apple Silicon via Virtualization.framework"
   homepage "https://github.com/pelagos-containers/pelagos-mac"
-  version "0.6.16"
+  version "0.6.17"
 
   url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v#{version}/pelagos-mac-#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "ebd1591f4f0933ac12940052838aebe5e271f5a85a9697a6e36731468af636d2"
+  sha256 "724a1ef3f48f6e30639081c606a25feff2417e47acbfba230f5d035509aec5b8"
 
   resource "vm" do
-    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.16/pelagos-mac-vm-0.6.16.tar.gz"
-    sha256 "19134c7dd145da994e66db5f8a178e945f226a73b3cf9e7ab7ec54809a8cc70f"
+    url "https://github.com/pelagos-containers/pelagos-mac/releases/download/v0.6.17/pelagos-mac-vm-0.6.17.tar.gz"
+    sha256 "69b1841c5ca7d573d763826d4c43503edc79401a19999feb8485319a953c6291"
   end
 
   def install
@@ -46,9 +46,15 @@ class PelagosMac < Formula
         pelagos ping
         pelagos run alpine echo hello
 
-      To upgrade:
+      To upgrade (binary + kernel only — preserves your OCI image cache):
         brew upgrade pelagos-containers/tap/pelagos-mac
-        pelagos vm init --force   # stops old VM, re-inits with new image
+        pelagos ping
+
+      To replace the VM disk (destroys OCI image cache — only needed when
+      the release notes say the disk format changed):
+        pelagos vm stop
+        brew upgrade pelagos-containers/tap/pelagos-mac
+        pelagos vm init --force
         pelagos ping
 
       To uninstall completely:
