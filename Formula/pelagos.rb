@@ -16,12 +16,12 @@ class Pelagos < Formula
   on_linux do
     on_intel do
       url "https://github.com/pelagos-containers/pelagos/releases/download/v#{version}/pelagos-x86_64-linux"
-      sha256 "34fff995f8f1859802e84c07c78bbc74a595265f9ca266846b073601a5f67862"
+      sha256 "da3dbd925ccef2af0656f1b5b6992d60e84158428549d0f873bd29ad6ea18604"
     end
 
     on_arm do
       url "https://github.com/pelagos-containers/pelagos/releases/download/v#{version}/pelagos-aarch64-linux"
-      sha256 "60a53b5c5794517b130ca8620b073dd31cb135a1ce5c60141d5bfe4591697291"
+      sha256 "29708fc41aca8b8e0fb6cd9059baaff520784d572192a7c9154cfba454fa2275"
     end
   end
 
