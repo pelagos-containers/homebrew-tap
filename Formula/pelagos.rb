@@ -10,18 +10,18 @@
 class Pelagos < Formula
   desc "Fast Linux container runtime — OCI-compatible, namespaces, cgroups v2, seccomp, networking"
   homepage "https://github.com/pelagos-containers/pelagos"
-  version "0.65.66"
+  version "0.65.67"
   license "Apache-2.0"
 
   on_linux do
     on_intel do
       url "https://github.com/pelagos-containers/pelagos/releases/download/v#{version}/pelagos-x86_64-linux"
-      sha256 "bad982effd8c7fcae6b02284646d676dbb45d8aa904d0ac89f7694419a76d0fb"
+      sha256 "5ae7604b572454778c94bcc3817f8c3449e047b708313e08212a311c9864bd2b"
     end
 
     on_arm do
       url "https://github.com/pelagos-containers/pelagos/releases/download/v#{version}/pelagos-aarch64-linux"
-      sha256 "2ed8da4f0b85b372ae30044d4d112c7d50b669d3d6aed999aeccb9dea43403e4"
+      sha256 "c741a21c9d785d94546c9d549af1bedfb9f88552715a3733c7deb30f956c2e91"
     end
   end
 
